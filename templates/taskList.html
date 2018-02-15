@@ -1,0 +1,8 @@
+
+<input type="text" placeholder="filter your to-dos" ng-model="todoFilter">
+<ol>
+  <li ng-repeat="item in $ctrl.todoList | filter: todoFilter track by $index">{{item}}<i class="material-icons" ng-click="$ctrl.remove(form.index)">close</i></li>
+</ol>
+<p><input id="addToDo" type="text" placeholder="Add your to-do" ng-model="form.item">
+
+<button type="button" ng-click="$ctrl.addItem(form.item)">Add</button></p>
