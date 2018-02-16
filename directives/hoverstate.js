@@ -1,22 +1,20 @@
-angular.module('mouseIssue', []);
-
-function Controller($scope) {
-  $scope.things = [{
-      item: 'one'
-    },
-    {
-      item: 'two'
-    },
-    {
-      item: 'three'
+(function(){
+  function hoverstate(){
+    return{
+    link: function ($scope, $element, $attrs){
+      $element.on("mouseover", function(){
+        $element.css("cursor", "crosshair");
+      });
     }
-  ];
-
-  $scope.mouseOverThing = function(thing) {
-    $scope.msg = "Mouse Over: " + thing.item;
+  }
   }
 
-  $scope.clickThing = function(thing) {
-    $scope.msg = "Clicked: " + thing.item;
-  }
-}
+
+  angular.module("app")
+    .directive("hoverstate", hoverstate);
+
+
+
+
+
+})();

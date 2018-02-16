@@ -4,12 +4,17 @@ body {
 }
 
 button {
-  background-color: #ff69b4;
+  background-color:#ff69b4;
+  opacity: 0.5;
   color: white;
   padding: 3px 112px;
   font-size: 20px;
   border-radius: 7px;
   margin-top: 30px;
+}
+
+button:hover {
+  opacity: 1;
 }
 
 input {
@@ -26,12 +31,10 @@ li {
   text-align: left;
 }
 
-li :hover {
-  background-color: #eee;
-}
 
 i {
   float: right;
+  clear: right;
 }
 
 #list {
